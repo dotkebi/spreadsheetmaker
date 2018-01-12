@@ -20,7 +20,7 @@ import static org.slf4j.LoggerFactory.getLogger;
 @Qualifier("excelService")
 public class ExcelService implements SpreadSheetService {
 
-    protected final Logger log = getLogger(this.getClass());
+    private final Logger log = getLogger(this.getClass());
 
     @Override
     public <T> void convert(HttpServletResponse response, Class<T> klass, List<T> datas, String fileName) {

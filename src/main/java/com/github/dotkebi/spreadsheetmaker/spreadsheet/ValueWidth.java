@@ -1,18 +1,12 @@
 package com.github.dotkebi.spreadsheetmaker.spreadsheet;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
 public class ValueWidth {
 
     private int width;
     private String value;
+
+    public ValueWidth() {
+    }
 
     public ValueWidth width(int width) {
         this.width = width;
@@ -23,4 +17,26 @@ public class ValueWidth {
         this.value = value;
         return this;
     }
+
+    public ValueWidth(int width, String value) {
+        this.width = width;
+        this.value = value;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+
 }
